@@ -123,6 +123,8 @@ export default class Dom {
   }
 
   createPlayerContainer() {
+    const gameMessage = document.querySelector(".game-message");
+    gameMessage.textContent = "Waiting...";
     const playerContainers = document.querySelector(".player-boards-container");
     while (playerContainers.firstChild) {
       playerContainers.removeChild(playerContainers.firstChild);
