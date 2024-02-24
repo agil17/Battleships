@@ -1,0 +1,80 @@
+/* body {
+  color: red;
+} */
+
+html {
+  height: 100vh;
+  width: 100vw;
+}
+
+body {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(55,54,113,1) 49%);
+  font-family: "Goldman", Arial, Helvetica, sans-serif;
+}
+
+body > h1 {
+  color: white;
+  text-align: center;
+  font-size: 4rem;
+}
+
+body > .game-message {
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.player-boards-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  column-gap: 100px;
+  flex-wrap: wrap;
+}
+
+.player-container > h1, .cpu-container > h1 {
+  text-align: center;
+  color: white;
+}
+
+.player-board, .cpu-board {
+  display: grid;
+  place-content: center;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  border: solid red 2px;
+  width: 400px;
+  height: 400px;
+}
+
+.player-board > button:hover {
+  background-color: gray;
+}
+
+.player-board > .player-square.ship {
+  background-color: blue;
+}
+
+.player-board > .player-square.miss, .cpu-board > .cpu-square.miss {
+  background-color: red;
+}
+
+.player-board > .player-square.hit, .cpu-board > .cpu-square.hit {
+  background-color: green;
+}
+
+
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 8px;
+  margin-top: 16px;
+}
